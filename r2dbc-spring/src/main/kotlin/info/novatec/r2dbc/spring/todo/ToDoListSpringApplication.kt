@@ -1,11 +1,11 @@
-package info.novatec.r2dbcspring
+package info.novatec.r2dbc.spring.todo
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class R2dbcSpringApplication
+class ToDoListSpringApplication
 
 fun main(args: Array<String>) {
-	runApplication<R2dbcSpringApplication>(*args)
+	runApplication<ToDoListSpringApplication>(*args)
 }
