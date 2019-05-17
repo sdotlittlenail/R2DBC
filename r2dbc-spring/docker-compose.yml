@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  docker-mysql:
+    image: mysql:latest
+    container_name: r2dbc_spring_todo_container
+    ports:
+      - "2012:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root123
+      - MYSQL_DATABASE=r2dbc_spring_todo_db
+      - MYSQL_USER=app_user
+      - MYSQL_PASSWORD=r2dbc_spring_todo_pw

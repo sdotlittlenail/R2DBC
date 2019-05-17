@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+	id("org.jetbrains.kotlin.plugin.jpa") version "1.3.31"
 	id("org.springframework.boot") version "2.2.0.M3"
 	id("io.spring.dependency-management") version "0.6.0.RELEASE"
 	kotlin("jvm") version "1.3.31"
@@ -20,6 +21,7 @@ repositories {
 dependencies {
 	implementation("mysql:mysql-connector-java")
 	implementation("org.springframework.boot:spring-boot-starter")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
