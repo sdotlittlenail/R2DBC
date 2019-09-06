@@ -1,0 +1,1 @@
+INSERT INTO todo (NAME, CATEGORY, COMPLETE) VALUES ('Laundry', 'Household', false);
