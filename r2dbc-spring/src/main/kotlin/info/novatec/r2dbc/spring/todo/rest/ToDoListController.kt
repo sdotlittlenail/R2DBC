@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 
@@ -20,7 +21,8 @@ class ToDoListController(private val service: ToDoService) {
 
     @GetMapping
     @ResponseStatus(OK)
-    fun getTodoList() = service.getAll()
+    fun getTodoList(@RequestParam(required = false) complete: Boolean?) =
+            complete?.let(service::getAllByComplete) ?: service.getAll()
 
     @GetMapping("/{todoId}")
     @ResponseStatus(OK)
