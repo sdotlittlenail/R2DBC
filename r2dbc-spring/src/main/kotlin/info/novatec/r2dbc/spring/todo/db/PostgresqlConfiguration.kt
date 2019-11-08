@@ -14,8 +14,6 @@ class PostgresqlConfiguration(
         @Value("\${spring.r2dbc.password}") private val password: String) : AbstractR2dbcConfiguration() {
 
     override fun connectionFactory() = PostgresqlConnectionFactory(PostgresqlConnectionConfiguration.builder()
-            .host("127.0.0.1")
-            .database("r2dbc_spring_todo_db")
             .username(username)
             .password(password)
             .build())
